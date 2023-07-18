@@ -65,6 +65,37 @@
 .nav-link:hover {
   text-decoration: underline;
 }
+.comments-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.comment-card {
+  background-color: #f20e0e9a;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  max-width: 400px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.comment-card p {
+  margin: 5px;
+  padding: 0;
+}
+
+.comment-card .author {
+  font-weight: bold;
+}
+
+.comment-card .date {
+  font-style: italic;
+}
+
+.comment-card .votes {
+  color: #555;
+}
 
 
 

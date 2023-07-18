@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getSingleArticle } from "../Api";
-import { useParams } from "react-router-dom" 
+import { useParams, Link } from "react-router-dom" 
+import CommentsList from "./CommentsList";
 
 const SingleArticle = () => {
   const { article_id } = useParams();
@@ -27,7 +28,8 @@ const SingleArticle = () => {
       <p>Topic: {topic}</p>
       <p>Votes: {votes}</p>
       <p>Created At: {created_at}</p>
-     
+      <Link to={`/api/articles/${article_id}/comments`}>View All Comments</Link>
+
     </>
   );
 };
