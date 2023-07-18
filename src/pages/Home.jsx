@@ -1,13 +1,13 @@
 
 import HeaderHome from "../components/Header-home"
-
+import dog_gif from "../images/dog_gif.webp"
 const Home = () => {
  
   return (
    <>
   
   <HeaderHome />
-  {/* <img src={news} alt="news logo">this is the image</img> */}
+  <img className="gif-image"src={dog_gif} alt="animated gif of a dog delivering newspaper"></img>
   </>
   )
  }

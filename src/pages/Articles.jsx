@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import ArticlesCard from "../components/ArticlesCard";
 import { getAllArticles } from "../Api";
 import Newspaper from "../images/Newspaper.jpeg";
+import { Link } from "react-router-dom";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -23,12 +24,14 @@ const Articles = () => {
           <ol className="article_list">
             {articles.map(({ article_id, author, title, topic }) => {
               return (
-                <ArticlesCard
-                  key={article_id}
-                  title={title}
-                  author={author}
-                  topic={topic}
-                />
+                <Link to={`/articles/${article_id}`} key={article_id}>
+                  <ArticlesCard
+                    title={title}
+                    author={author}
+                    topic={topic}
+                    isSingleArticle={false}
+                  />
+                </Link>
               );
             })}
           </ol>
