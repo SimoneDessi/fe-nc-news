@@ -1,7 +1,8 @@
+
 import HeaderHome from "../components/Header-home"
-// import news from "../images/news"
 
 const Home = () => {
+ 
   return (
    <>
   
