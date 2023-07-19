@@ -28,7 +28,7 @@ const SingleArticle = () => {
       <p>Topic: {topic}</p>
       <p>Votes: {votes}</p>
       <p>Created At: {created_at}</p>
-      <Link to={`/api/articles/${article_id}/comments`}>View All Comments</Link>
+      <CommentsList article_id={article_id} /> 
 
     </>
   );

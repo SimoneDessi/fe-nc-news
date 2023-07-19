@@ -21,7 +21,7 @@ return (
       <li key={comment.comment_id} className="comment-card">
         <p className="body">{comment.body}</p>
         <p className="author"> Author:{comment.author}</p>
-        <p className="date">Date:{comment.created_at}</p>
+        <p className="date">{new Date(comment.created_at).toLocaleDateString()}</p>
         <p className="votes">Votes:{comment.votes}</p>
 
       </li>
