@@ -45,7 +45,7 @@
 .navigator-container {
   display: flex;
   justify-content: center;
-  background-color: #f20e0e9a;
+  background-color: #5390d9;
   padding: 10px 0;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .nav-link {
-  color: #fff;
+  color: #7400b8;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -71,8 +71,8 @@
 }
 
 .comment-card {
-  background-color: #f20e0e9a;
-  border: 1px solid #ddd;
+  background-color: #5390d9;
+  border: 1px solid #7400b8;
   padding: 10px;
   margin: 10px;
   max-width: 400px;
@@ -81,6 +81,7 @@
 }
 
 .comment-card p {
+  background-color:#48bfe3 ;
   margin: 5px;
   padding: 0;
 }

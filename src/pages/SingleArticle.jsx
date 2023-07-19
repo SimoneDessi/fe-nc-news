@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getSingleArticle } from "../Api";
 import { useParams, Link } from "react-router-dom" 
 import CommentsList from "./CommentsList";
+import VoteOnArticle from "../components/VoteOnArticle";
 
 const SingleArticle = () => {
   const { article_id } = useParams();
@@ -17,7 +18,7 @@ const SingleArticle = () => {
     return <div>Loading page...</div>;
   }
 
-  const { title, author, topic, body, votes, article_img_url, created_at } = article;
+  const { title, author, topic, body, article_img_url, created_at } = article;
 
   return (
     <>
@@ -26,9 +27,11 @@ const SingleArticle = () => {
       <div className="article-body">{body}</div>
       <p>Author: {author}</p>
       <p>Topic: {topic}</p>
-      <p>Votes: {votes}</p>
+      
+      <VoteOnArticle article_id={article_id} initialVotes={article.votes}/>
       <p>Created At: {created_at}</p>
       <CommentsList article_id={article_id} /> 
+      
 
     </>
   );
