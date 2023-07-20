@@ -19,7 +19,7 @@ const SingleArticle = () => {
   }
 
   const { title, author, topic, body, article_img_url, created_at } = article;
-
+  const formattedDate = new Date(created_at).toLocaleString();
   return (
     <>
       <h1 className="article_header">{title}</h1>
@@ -33,7 +33,7 @@ const SingleArticle = () => {
       <p>Topic: {topic}</p>
 
       <VoteOnArticle article_id={article_id} initialVotes={article.votes} />
-      <p>Created At: {created_at}</p>
+      <p>Posted on: {formattedDate}</p>
       <CommentsList article_id={article_id} />
     </>
   );
