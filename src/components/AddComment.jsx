@@ -5,41 +5,47 @@ const AddCommentForm = ({ article_id }) => {
   const [username, setUserName] = useState('');
   const [body, setBody] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [error, setError] = useState(null);
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const handleUsernameChange = (e) => {
     setUserName(e.target.value);
-    setErrorMessage('');
+    setError(null);
   };
 
   const handleBodyChange = (e) => {
     setBody(e.target.value);
-    setErrorMessage('');
+    setError(null);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!username || !body) {
-      setErrorMessage('Please fill in all the fields.');
-      return;
+      setError('Please fill in all the fields.');
     }
 
     setIsSubmitting(true);
+    setShowConfirmation(true);
+    setError(null);
 
-    postComment(article_id, { username, body })
-      .then(({data}) => {
-        const newComment = data.comment;
+    const commentData = {
+      username,
+      body,
+      article_id,
+      created_at: new Date().toISOString(),
+    };
 
+    postComment(article_id, commentData)
+      .then(() => {
+        setIsSubmitting(false);
+        setShowConfirmation(true);
         setUserName('');
         setBody('');
-        setIsSubmitting(false);
-        setErrorMessage('');
       })
       .catch((error) => {
-       
         setIsSubmitting(false);
-        setErrorMessage('Failed to post the comment. Please try again.');
+        setError('Failed to post the comment. Please try again.');
       });
   };
 
@@ -60,10 +66,11 @@ const AddCommentForm = ({ article_id }) => {
         required
         placeholder="Write your comment here..."
       />
-      {errorMessage && <p>{errorMessage}</p>}
+      {error && <p>{error}</p>}
       <button type="submit" disabled={isSubmitting}>
         {isSubmitting ? 'Posting...' : 'Add Comment'}
       </button>
+      {showConfirmation && <p>Comment posted successfully!</p>}
     </form>
   );
 };
