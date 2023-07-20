@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getSingleArticle } from "../Api";
 import { useParams } from "react-router-dom" 
-import CommentsList from "../components/CommentsList";
+import CommentsList from "./CommentsList";
 import AddCommentForm from "../components/AddComment";
 
 const SingleArticle = () => {

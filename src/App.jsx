@@ -3,10 +3,10 @@ import "./App.css";
 import Navigator from "./components/Navigator";
 import Home from "./pages/Home";
 import Articles from "./pages/Articles";
-import SingleArticle from "./components/SingleArticle";
+import SingleArticle from "./pages/SingleArticle";
 import Login from "./pages/Login";
 import Topics from "./pages/Topics";
-import CommentsList from "./components/CommentsList";
+import CommentsList from "./pages/CommentsList";
 
 function App() {
   return (
