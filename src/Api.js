@@ -21,3 +21,8 @@ export const getAllCommentsFromArticle = (article_id) => {
     return data.comments
   })
 }
+export const postComment = (article_id, commentData) => {
+  return newsApi.post(`/articles/${article_id}/comments`, commentData).then(({ data }) => {
+    return data.comments
+  })
+}

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getSingleArticle } from "../Api";
-import { useParams, Link } from "react-router-dom" 
-import CommentsList from "./CommentsList";
+import { useParams } from "react-router-dom" 
+import CommentsList from "../components/CommentsList";
+import AddCommentForm from "../components/AddComment";
 
 const SingleArticle = () => {
   const { article_id } = useParams();
@@ -28,6 +29,7 @@ const SingleArticle = () => {
       <p>Topic: {topic}</p>
       <p>Votes: {votes}</p>
       <p>Created At: {created_at}</p>
+      <AddCommentForm article_id={article_id}/>
       <CommentsList article_id={article_id} /> 
 
     </>
