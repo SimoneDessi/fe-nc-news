@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getSingleArticle } from "../Api";
-import { useParams, Link } from "react-router-dom" 
+import { useParams } from "react-router-dom";
 import CommentsList from "./CommentsList";
 import VoteOnArticle from "../components/VoteOnArticle";
 
@@ -23,16 +23,18 @@ const SingleArticle = () => {
   return (
     <>
       <h1 className="article_header">{title}</h1>
-      <img src={article_img_url} alt="article image" className="article_image" />
+      <img
+        src={article_img_url}
+        alt="article image"
+        className="article_image"
+      />
       <div className="article-body">{body}</div>
       <p>Author: {author}</p>
       <p>Topic: {topic}</p>
-      
-      <VoteOnArticle article_id={article_id} initialVotes={article.votes}/>
-      <p>Created At: {created_at}</p>
-      <CommentsList article_id={article_id} /> 
-      
 
+      <VoteOnArticle article_id={article_id} initialVotes={article.votes} />
+      <p>Created At: {created_at}</p>
+      <CommentsList article_id={article_id} />
     </>
   );
 };
