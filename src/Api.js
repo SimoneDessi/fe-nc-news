@@ -21,3 +21,11 @@ export const getAllCommentsFromArticle = (article_id) => {
     return data.comments
   })
 }
+export const voteOnArticle = (article_id, voteType) => {
+  const voteData = {
+    inc_votes: voteType === "up" ? 1 : -1,
+  };
+  return newsApi.patch(`/articles/${article_id}`, voteData).then(({ data }) => {
+    return data.article
+  })
+}
