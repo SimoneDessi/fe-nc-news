@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { getSingleArticle } from "../Api";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom" 
 import CommentsList from "./CommentsList";
+import AddCommentForm from "../components/AddComment";
 import VoteOnArticle from "../components/VoteOnArticle";
 
 const SingleArticle = () => {
@@ -34,6 +35,7 @@ const SingleArticle = () => {
 
       <VoteOnArticle article_id={article_id} initialVotes={article.votes} />
       <p>Posted on: {formattedDate}</p>
+      <AddCommentForm article_id={article_id}/>
       <CommentsList article_id={article_id} />
     </>
   );
