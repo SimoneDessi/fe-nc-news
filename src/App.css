@@ -1,15 +1,87 @@
-.header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.gif-image {
-  display: block;
-  margin: 0 auto; 
-  max-width: 100%;
-  width: 80%; 
-  height: auto; 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+  /*===== 
+NAVIGATOR 
+=====*/
+.navigator-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  padding: 0.5rem 0;
 }
 
+.nav-links { 
+  padding: 0.5rem 0;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 0.2rem solid #290EA2;
+}
+
+.nav-links a{
+  font-family: "Roboto", sans-serif, Arial;
+  font-weight: 500;  
+  font-size: 2rem;
+  color: #290EA2;
+  text-decoration: none;
+}
+
+.nav-links a:hover{
+ color: #5CE1E6
+}
+
+
+
+/*====== 
+  HOME 
+======*/
+
+.welcome-home {
+  color: #5271FF;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.gif-home-container{
+  width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+}
+.gif-home {
+width: 30rem;
+}
+
+.home {
+color: #5271FF;
+  position: fixed;
+  bottom: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-left: 1rem;
+ 
+}
+
+
+@media only screen and (max-width: 600px){
+/*====== 
+  HOME 
+======*/
+.home {
+    position:fixed;
+    bottom: 1rem;
+  }
+}
+/* =====
+ARTICLES
+======= */
 .articles-container {
   text-align: center;
 }
@@ -42,29 +114,8 @@
   line-height: 1.6; 
   margin-bottom: 20px;
 }
-.navigator-container {
-  display: flex;
-  justify-content: center;
-  background-color: #5390d9;
-  padding: 10px 0;
-}
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
 
-.nav-link {
-  color: #7400b8;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.nav-link:hover {
-  text-decoration: underline;
-}
 .comments-container {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -97,6 +148,8 @@
 .comment-card .votes {
   color: #555;
 }
+
+
 .confirmation-popup {
   position: fixed;
   bottom: 20px;
@@ -120,9 +173,5 @@
 
 
 
-@media (max-width: 768px) {
-  .article_list li {
-    padding: 5px;
-  }
-}
+
 

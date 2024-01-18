@@ -1,15 +1,17 @@
+import news from "../images/news-gif.gif";
 
-import HeaderHome from "../components/Header-home"
-import dog_gif from "../images/dog_gif.webp"
 const Home = () => {
- 
   return (
-   <>
-  
-  <HeaderHome />
-  <img className="gif-image"src={dog_gif} alt="animated gif of a dog delivering newspaper"></img>
-  </>
-  )
- }
- 
- export default Home
+    <>
+    <h1 className="welcome-home">Welcome to...</h1>
+      <div className="gif-home-container">
+        <img src={news} alt="simo's news logo gif" className="gif-home" />
+      </div>
+      <div className="button"></div>
+     <p className="home">
+      This is a project developed over the Northcoders bootcamp</p>
+    </>
+  );
+};
+
+export default Home;

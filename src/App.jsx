@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Topics from "./pages/Topics";
 import CommentsList from "./pages/CommentsList";
 
+
 function App() {
   return (
     <>
@@ -19,7 +20,7 @@ function App() {
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/:article_id" element={<SingleArticle />} />
           <Route
-            path="/api/articles/:article_id/comments"
+            path="/articles/:article_id/comments"
             element={<CommentsList />}
           />
           <Route path="/topics" element={<Topics />} />
