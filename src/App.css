@@ -81,17 +81,15 @@ ARTICLES
   text-align: center;
   margin-bottom: 20px;
 }
-.gif-articles{
-  width: 10rem
+.gif-articles {
+  width: 10rem;
 }
 .articles-container {
   display: grid;
   justify-content: center;
-
 }
 
 .articles-list {
-
   display: grid;
   gap: 2rem;
   padding: 10px;
@@ -99,7 +97,6 @@ ARTICLES
 }
 
 .articles-link {
-
   text-decoration: none;
   color: var(--dark-blue);
 }
@@ -112,7 +109,7 @@ ARTICLES
 .articles-link:hover {
 }
 @media only screen and (min-width: 400px) {
-  .articles-list{
+  .articles-list {
     grid-template-columns: auto auto auto;
   }
 }
