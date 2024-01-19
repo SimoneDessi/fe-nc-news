@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { voteOnArticle } from "../Api";
 import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
+// import "./StyleComponents.css"
+
 
 const VoteOnArticle = ({ article_id, initialVotes }) => {
   const [votes, setVotes] = useState(initialVotes);

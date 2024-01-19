@@ -1,5 +1,5 @@
 
-import "./Components.css"
+import "./StyleComponents.css"
 
 const Loading = () => {
   return (
