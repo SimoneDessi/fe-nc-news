@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <>
     <h1 className="welcome-home">Welcome to...</h1>
-      <div className="gif-home-container">
+      <div className="gif-container">
         <img src={news} alt="simo's news logo gif" className="gif-home" />
       </div>
       <div className="button"></div>
