@@ -9,6 +9,10 @@ html{
 
 #root {
   background-color: rgb(255, 255, 255);
+  --dark-blue:#290EA2;
+  --mid-blue:#5271FF;
+  --light-blue:#5CE1E6;
+  --red:#FF5757;
 }
 
 
