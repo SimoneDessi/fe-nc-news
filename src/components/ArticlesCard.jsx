@@ -6,22 +6,24 @@ const ArticlesCard = ({
   topic,
   isSingleArticle,
   votes,
-  article_img_url,
+  image,
   created_at,
 }) => {
   return (
     <div className="articles-card">
-      <h2>{title}</h2>
-      <p>Author: {author}</p>
-      <p>Topic: {topic}</p>
+      <div className="image-container">
+        <img src={image} alt="article image" className="article-image" />
+      </div>
+      <div className="info-card">
+        <h2 className="title-card">{title}</h2>
+        <p className="author-card">Author: {author}</p>
+        <p className="topic-card">Topic: {topic}</p>
+      </div>
+
       {isSingleArticle && (
         <>
           <p>Votes: {votes}</p>
-          <img
-            src={article_img_url}
-            alt="article image"
-            className="article_image"
-          />
+
           <p>Created At: {created_at}</p>
         </>
       )}
