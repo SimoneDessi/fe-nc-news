@@ -1,0 +1,149 @@
+/* =======
+LOADING
+======== */
+.loader {
+  margin: 5rem;
+  animation: rotate 4s infinite;
+  height: 5rem;
+  width: 5rem;
+  color: var(--dark-blue);
+}
+
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 2rem;
+  width: 2rem;
+}
+.loader:before {
+  animation: ball1 2s infinite;
+  background-color: var(--red);
+  box-shadow: 2rem 0 0 var(--red);
+  margin-bottom: 0.6rem;
+}
+.loader:after {
+  animation: ball2 1s infinite;
+  background-color: var(--light-blue);
+  box-shadow: 2rem 0 0 var(--light-blue);
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg) scale(0.8);
+    -moz-transform: rotate(0deg) scale(0.8);
+  }
+  50% {
+    -webkit-transform: rotate(360deg) scale(1.2);
+    -moz-transform: rotate(360deg) scale(1.2);
+  }
+  100% {
+    -webkit-transform: rotate(720deg) scale(0.8);
+    -moz-transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 2rem 0 0 var(--dark-blue);
+  }
+  50% {
+    box-shadow: 0 0 0 var(--dark-blue);
+    margin-bottom: 0;
+    -webkit-transform: translate(1rem, 1rem);
+    -moz-transform: translate(1rem, 1rem);
+  }
+  100% {
+    box-shadow: 2rem 0 0 var(--dark-blue);
+    margin-bottom: 0.7rem;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 2rem 0 0 var(--mid-blue);
+  }
+  50% {
+    box-shadow: 0 0 0 var(--mid-blue);
+    margin-top: -1.6rem;
+    -webkit-transform: translate(15px, 15px);
+    -moz-transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 2rem 0 0 var(--mid-blue);
+    margin-top: 0;
+  }
+}
+
+.load {
+  color: var(--light-blue);
+  font-size: 1rem;
+}
+
+/*===== 
+NAVIGATOR 
+=====*/
+.navigator-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  padding: 0.5rem 0;
+}
+
+.nav-links {
+  padding: 0.5rem 0;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 0.2rem solid #290ea2;
+}
+
+.nav-links a {
+  font-family: "Roboto", sans-serif, Arial;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #290ea2;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #5ce1e6;
+}
+
+/*=====
+ ARTICLES-CARD
+ ======= */
+ .articles-card {
+  width: 18.75rem;
+  height: 25rem;
+  border-radius: 1rem;
+  box-shadow: 1.5rem 1rem 1rem rgba(0, 0, 0, 0.4);
+  background-color: rgb(247, 247, 247);
+}
+
+.image-container {
+  width: 18.75rem;
+  height: 14.25rem;
+  border-radius: 0.62rem 0.62rem 0 0;
+  overflow: hidden;
+}
+
+.article-image {
+  width: 100%;
+}
+
+.info-card {
+  height: 10rem;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.title-card {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 1rem;
+  text-align: center;
+}

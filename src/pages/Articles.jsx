@@ -3,6 +3,8 @@ import ArticlesCard from "../components/ArticlesCard";
 import { getAllArticles } from "../Api";
 import news from "../images/news-gif.gif";
 import { Link } from "react-router-dom";
+import Loading from "../components/Loading"
+
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -21,7 +23,7 @@ const Articles = () => {
      
       <div className="articles-container">
         {loading ? (
-          <p> Page is loading...</p>
+          <Loading />
         ) : (
           <ol className="articles-list">
             {articles.map(({ article_id, author, title, topic, article_img_url }) => {
