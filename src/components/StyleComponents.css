@@ -147,3 +147,33 @@ NAVIGATOR
   font-size: 1rem;
   text-align: center;
 }
+
+/* ======
+BANNER
+======= */
+
+.banner-container{
+  width: auto;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+ .banner-container  {
+  width: 100%;
+  height: 0.5rem;
+  border: 0.2rem solid black;
+  background-color: #290ea2;
+}
+
+
+/* ============
+VOTE-ON-ARTICLE 
+===============*/
+
+.vote-container{
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

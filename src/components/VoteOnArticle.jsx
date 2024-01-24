@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { voteOnArticle } from "../Api";
 import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
-// import "./StyleComponents.css"
+import "./StyleComponents.css"
 
 
 const VoteOnArticle = ({ article_id, initialVotes }) => {
@@ -36,7 +36,7 @@ const VoteOnArticle = ({ article_id, initialVotes }) => {
 };
 
   return (
-    <div>
+    <div className="vote-container">
       {error && <p>{error.message}</p>}
       <p>Votes: {votes}</p>
       <button

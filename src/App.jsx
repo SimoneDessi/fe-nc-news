@@ -7,12 +7,13 @@ import SingleArticle from "./pages/SingleArticle";
 import Login from "./pages/Login";
 import Topics from "./pages/Topics";
 import CommentsList from "./pages/CommentsList";
+import Banner from "./components/Banner";
 
 
 function App() {
   return (
     <>
-      <div>
+      <div className="app">
         <Navigator />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,7 +26,7 @@ function App() {
           />
           <Route path="/topics" element={<Topics />} />
         </Routes>
-      </div>
+        </div>
     </>
   );
 }

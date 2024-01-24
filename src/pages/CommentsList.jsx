@@ -15,7 +15,7 @@ useEffect(() => {
 return (
   <>
   <div className="comments-container">
-  <h2>These are the comments for the article</h2>
+  <h2>Comments </h2>
   <ul>
     {comments.map((comment) => (
       <li key={comment.comment_id} className="comment-card">
@@ -23,7 +23,6 @@ return (
         <p className="author"> Author:{comment.author}</p>
         <p className="date">{new Date(comment.created_at).toLocaleDateString()}</p>
         <p className="votes">Votes:{comment.votes}</p>
-
       </li>
     ))}
   </ul>

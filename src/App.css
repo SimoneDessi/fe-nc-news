@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-
-
 /*====== 
   HOME 
 ======*/
@@ -84,19 +82,41 @@ ARTICLES
   }
 }
 
+/* ===========
+SINGLE ARTICLE
+============ */
 
-
-/* =================================== */
-
-.article-body {
-  font-size: 0.3rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
+.single-article-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem;
+}
+.single-article-container .single-article-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.single-article-card .article-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark-blue);
 }
 
-.comments-container {
-  font-family: Arial, sans-serif;
-  text-align: center;
+.single-article-card img {
+  width: 30rem;
+  margin: 2rem 0;
+}
+
+.single-article-container .single-article-description {
+  display: flex;
 }
 
 .comment-card {

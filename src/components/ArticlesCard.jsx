@@ -1,14 +1,11 @@
 import React from "react";
-import "./StyleComponents.css"
+import "./StyleComponents.css";
 
 const ArticlesCard = ({
   title,
   author,
   topic,
-  isSingleArticle,
-  votes,
   image,
-  created_at,
 }) => {
   return (
     <div className="articles-card">
@@ -20,14 +17,6 @@ const ArticlesCard = ({
         <p className="author-card">Author: {author}</p>
         <p className="topic-card">Topic: {topic}</p>
       </div>
-
-      {isSingleArticle && (
-        <>
-          <p>Votes: {votes}</p>
-
-          <p>Created At: {created_at}</p>
-        </>
-      )}
     </div>
   );
 };

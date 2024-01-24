@@ -70,7 +70,8 @@ const AddCommentForm = ({ article_id }) => {
       <button type="submit" disabled={isSubmitting}>
         {isSubmitting ? 'Posting...' : 'Add Comment'}
       </button>
-      {showConfirmation && <p>Comment posted successfully!</p>}
+      {showConfirmation && 
+      <p>Comment posted successfully!</p>}
     </form>
   );
 };
